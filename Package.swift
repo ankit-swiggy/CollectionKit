@@ -14,7 +14,7 @@ let package = Package(
     ],
     dependencies: [
         // 👇 Add the dependency here
-        .package(url: "https://github.com/lkzhao/YetAnotherAnimationLibrary.git", from: "1.0.0")
+        .package(url: "https://github.com/ankit-swiggy/YetAnotherAnimationLibrary.git", from: "1.0.0")
     ],
     targets: [
         .target(
