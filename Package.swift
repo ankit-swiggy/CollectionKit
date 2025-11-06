@@ -13,17 +13,18 @@ let package = Package(
         ),
     ],
     dependencies: [
-        // 👇 Add this line
+        // 👇 Add the dependency here
         .package(url: "https://github.com/lkzhao/YetAnotherAnimationLibrary.git", from: "1.0.0")
     ],
     targets: [
         .target(
             name: "CollectionKit",
-            dependencies: ["YetAnotherAnimationLibrary"],
+            dependencies: [],
             path: "Sources"
         ),
         .target(
             name: "WobbleAnimator",
+            dependencies: ["YetAnotherAnimationLibrary"],
             path: "WobbleAnimator"
         ),
         .testTarget(
