@@ -4,8 +4,7 @@ import PackageDescription
 let package = Package(
     name: "CollectionKit",
     platforms: [
-        .iOS(.v11),
-        .macOS(.v10_13)
+        .iOS(.v11)
     ],
     products: [
         .library(
@@ -13,9 +12,14 @@ let package = Package(
             targets: ["CollectionKit", "WobbleAnimator"]
         ),
     ],
+    dependencies: [
+        // 👇 Add this line
+        .package(url: "https://github.com/lkzhao/YetAnotherAnimationLibrary.git", from: "1.0.0")
+    ],
     targets: [
         .target(
             name: "CollectionKit",
+            dependencies: ["YetAnotherAnimationLibrary"],
             path: "Sources"
         ),
         .target(
